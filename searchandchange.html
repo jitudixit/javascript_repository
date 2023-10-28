@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>buttonfunction</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Inconsolate:400,700");
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: 'Inconsolata', sans-serif;
+            background: #2a364f;
+            display: grid;
+            place-items: center;
+        }
+        .main-div{
+            width: 100vh;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            text-align: center;
+            color: azure;
+        }
+        button{
+            display: inline-block;
+            background: #f8b627;
+            color: #f4f4f4;
+            font-size: 16px;
+            font-weight: normal;
+            width: 132px;
+            text-align: center;
+            border-radius: 3px;
+            transition: 400ms;
+            text-decoration: none;
+            padding: 10px 22px;
+            z-index: 1000000;
+            outline: none;
+            border: none;
+        }
+        p{
+            text-align: center;
+            color:rgba(255,255,255,0.8);
+        }
+        h1{
+            color: aquamarine;
+        }
+
+    </style>
+</head>
+<body>
+    <p class="para">Plz like the viedo</p>
+    <p class="para">Plz share this video</p>
+    <p>Don't forget to subscribe my chanel</p>
+    <h1 id="heading">Changeh the content of the h1</h1>
+    
+    <button onclick="changeContent()">click me</button>
+    <script>
+        const changeContent = ()=>{
+            // directly handle function
+            // document.getElementById("heading").innerHTML = "Welcome to my palce";
+
+            // reference, heading change 
+            const changeHeading = document.getElementById("heading");
+            changeHeading.innerHTML = "Welcome to another place";
+        }
+    </script>
+</body>
+</html>

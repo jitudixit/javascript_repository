@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Inconsolate:400,700");
+        body{
+            font-family: 'Inconsolata', sans-serif;
+            background: #2a364f;
+        }
+        h1{
+            text-align: center;
+            color: rgba(255,255,255,0.8);
+        }
+        .credit{
+            text-align: center;
+            color: rgba(255, 255, 255, 0.4);
+        }
+        .content{
+            padding-top: 45px;
+            padding-bottom: 20px;
+        }
+        .button_container{
+            width: 176px;
+            margin: 0 auto;
+            margin-top: 30p;
+            padding-top: 40px;
+            /* display: grid; */
+        }
+        .button_su{
+            overflow: hidden;
+            position: relative;
+            display: inline-block;
+            border-radius: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0px 10px 8px -8px rgba(0, 0, 0, 0.6);
+        }
+        .su_button_circle{
+            background-color: red;
+            border-radius: 1000px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 0px;
+            height: 0px;
+            margin-left: 0px;
+            margin-top: 0px;
+            pointer-events: none;
+            /* animation-timing-function: ease-in-out; */ 
+        }
+        .button_su_inner{
+            display: inline-block;
+            background: #f8b627;
+            color: #f4f4f4;
+            font-size: 16px;
+            font-weight: normal;
+            width: 132px;
+            text-align: 3px;
+            transition: 400ms;
+            text-decoration: none;
+            padding: 22px;
+            z-index: 100000;
+        }  
+        .button_text_container{
+            position: relative;
+            z-index: 100000;
+        }
+        .explode-circle{
+            animation: explode 0.5s forwards;
+        }
+
+        .desplode-cirecle{
+            animation: desplode 0.5s forwards;
+        }
+    </style>
+</head>
+<body>
+    <!-- 4 ways to create events -->
+    <div class="content">
+        <h1>Different event types in JavaScript</h1>
+        <div class="button_container">
+            <div class="button_su">
+                <span class="su_button_circle">
+
+                </span>
+                <a href="#" class="button_su_inner" onclick="alert('I am awesome, but no one use me')">
+                <span class="button_text_container">
+                    simple Inline alert()
+                </span>
+                </a>
+            </div>
+
+            <div class="button_su">
+                <span class="su_button_circle">
+
+                </span>
+                <a href="#" class="button_su_inner" onclick="callingFunction()">
+                <span class="button_text_container">
+                    By Calling a function
+                </span>
+                </a>
+            </div>
+
+            <div class="button_su">
+                <span class="su_button_circle">
+
+                </span>
+                <a href="#" class="button_su_inner" id="thirdWay">
+                <span class="button_text_container" >
+                    In line event
+                </span>
+                </a>
+            </div>
+
+            <div class="button_su">
+                <span class="su_button_circle">
+
+                </span>
+                <a href="#" class="button_su_inner" id="fourthway">
+                <span class="button_text_container">
+                    Event Listeneres
+                </span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script>
+        // 2nd way event
+        const  callingFunction = () =>{
+            alert("By calling a funciton is most commaon way writing function");
+        }
+        // 3rd way event
+        const thirdWay = document.getElementById('thirdWay');
+        thirdWay.onclick = function(){
+            alert("By most commont funtiton again");
+        }
+        //4th way for writing function
+        const fourthway = document.querySelector('#fourthway');
+
+        fourthway.addEventListener('click', ()=>{
+            alert('I love this way of writing function');
+        })
+    </script>
+</body>
+</html>

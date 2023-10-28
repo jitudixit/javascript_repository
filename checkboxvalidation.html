@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Box Validation</title>
+    
+</head>
+<body>
+    <script>
+        function myfun(){
+            var a = document.forms.container;
+            for(i = 0; i<a.length; i++){
+                if(a[i].checked ==true)
+                    return true;
+            }
+        document.getElementById("messages").innerHTML = "** Pletse select anyone"
+        return false;
+        }
+    </script>
+    <h1 style="color: orangered; text-align: center;">Check Box Validation In JavaScript</h1>
+    <h1>Dixit Programer</h1>
+    <form action="" name="forms" onsubmit="return myfun()">
+        <input type="checkbox" name="container" value="like" id="">Like</input>
+        <input type="checkbox" name="container" value="share" id="">Share</input>
+        <input type="checkbox" name="container" value="subscribe" id="">Subscribe</input>
+        <div><p id="messages" style="color: red; font-size: 20px;"></p></div>
+        <input type="submit" value="SUMBMIT"></input>
+    </form>
+</body>
+</html>

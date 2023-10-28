@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Inconsolate:400,700");
+        body{
+            font-family: 'Inconsolata', sans-serif;
+            background: #2a364f;
+            display: grid;
+            place-items: center;
+        }
+        h1{
+            text-align: center;
+            color: rgba(255,255,255,0.8);
+        }
+        .credit{
+            text-align: center;
+            color: rgba(255, 255, 255, 0.4);
+        }
+        .content{
+            padding-top: 45px;
+            padding-bottom: 20px;
+        }
+
+      
+        .main-div{
+            width: 100vh;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            text-align: center;
+            color: azure;
+        }
+        #box{
+            width: 100px;
+            height: 100px;
+            background: gold;
+        }
+    </style>    
+</head>
+<body>
+    <div class="main-div">
+        <div id="box"></div>
+    </div>
+    <script>
+        const mEnter = document.getElementById('box');
+
+        mEnter.addEventListener('mouseenter',() =>{
+            mEnter.style.backgroundColor = 'red';
+            console.log('Mouse Enter');
+        });
+
+        mEnter.addEventListener('mouseleave', () =>{
+            console.log('Mouse leave');
+            mEnter.style.backgroundColor = 'pink';
+        });
+    </script>
+</body>
+</html>
